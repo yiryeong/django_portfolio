@@ -12,7 +12,8 @@ WORKDIR /django_portfolio
 
 
 # 필요한 환경 설치
-RUN apt-get install -y python3 python3-pip build-essential
+RUN apt-get update -y
+RUN apt-get install -y python3 python3-pip
 RUN pip3 install -r requirements.txt
 
 
