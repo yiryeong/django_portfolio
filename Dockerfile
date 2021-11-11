@@ -3,7 +3,7 @@ FROM ubuntu:18.04
 
 
 RUN apt-get update -y
-RUN apt-get git -y
+RUN apt-get install git -y
 
 
 # github 에 소스코드 받기
