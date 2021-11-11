@@ -2,23 +2,20 @@
 FROM ubuntu:18.04
 
 
-# 필요한 환경 설치
-RUN apt-get update
-RUN apt-get install python3 -y
-RUN apt-get install python3-pip -y
-RUN apt-get install git -y
-RUN pip3 install django
-RUN pip3 install djangorestframework
-RUN pip3 install markdown
-RUN pip3 install django-filter
-RUN pip3 install mysqlclient
-RUN pip3 install drf-yasg
+RUN apt-get update -y
+RUN apt-get git -y
 
 
 # github 에 소스코드 받기
-Run git clone https://github.com/yiryeong/django_portfolio.git
+RUN git clone https://github.com/yiryeong/django_portfolio.git
 WORKDIR /django_portfolio
 
 
+# 필요한 환경 설치
+RUN apt-get install -y python3 python3-pip build-essential
+RUN pip3 install -r requirements.txt
+
+
+EXPOSE 6000
 # container가 구동되면 실행
-ENTRYPOINT ["python3", "manage.py", "runserver", "6000"]
+ENTRYPOINT ["python3", "manage.py", "runserver", "0.0.0.0:6000"]
