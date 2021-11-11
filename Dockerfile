@@ -16,7 +16,7 @@ RUN pip3 install drf-yasg
 
 
 # github 에 소스코드 받기
-Run git clone git@github.com:yiryeong/django_portfolio.git
+Run git clone https://github.com/yiryeong/django_portfolio.git
 WORKDIR /django_portfolio
 
 
