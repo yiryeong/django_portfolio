@@ -18,6 +18,6 @@ RUN pip3 install -r requirements.txt
 RUN pip3 install mysqlclient
 
 
-EXPOSE 6000
+EXPOSE 7001
 # container가 구동되면 실행
-ENTRYPOINT ["python3", "manage.py", "runserver", "0.0.0.0:6000"]
+ENTRYPOINT ["python3", "manage.py", "runserver", "0.0.0.0:7001"]
