@@ -1,6 +1,8 @@
 # django_portfolio
 
 개인정보에 대한 CRUD 기능 구현 (화면[frontend] 없이 API만 구현)
+링크 : http://52.79.247.175:7001/api/
+
 - REST framework 사용
 - ORM 사용
 - DB : Mysql 사용
