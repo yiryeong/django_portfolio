@@ -13,7 +13,7 @@ WORKDIR /django_portfolio
 
 # 필요한 환경 설치
 RUN apt-get update -y
-RUN apt-get install -y python3 python3-pip
+RUN apt-get install -y python3-dev python3-pip libmysqlclient-dev gcc
 RUN pip3 install -r requirements.txt
 RUN pip3 install mysqlclient
 
